@@ -1,1 +1,3 @@
 这是我的博客
+* 目录
+[[file:org-mode/org-mode-用纯文本组织你的生活.org][org-mode]]
