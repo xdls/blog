@@ -1,16 +1,15 @@
-#+OPTIONS: \n:t
-* 入门
+本文原文地址在[[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]
+* 4 入门
 :PROPERTIES:
 :ID:       e50cfa7b-a1be-4897-9c7c-8c669b42a4d2
 :END:
 入门 =org-mode= 真的很容易。你只需要在你的Emacs启动文件中加入几行，就可以使用来自git仓库的最新版本的org-mode。
-** 用git获取org-mode
+** 4.1 用git获取org-mode
 :PROPERTIES:
 :ID:       3def84b9-c018-4145-af4d-4fb1c05cf243
 :END:
 我把org-mode的一份副本保留在 =git= 仓库 =~/git/org-mode/= 中。
 这个克隆是用
-\\
 #+begin_src sh
 cd ~/git
 git clone git://orgmode.org/org-mode.git
@@ -26,4 +25,37 @@ make uncompiled
 我在我的设置中运行未编译的源文件，所以未编译的make目标就是你需要的。
 
 我通常使用org-mode仓库中的 =master= 分支。
-** 
+** 4.2 org-mode的安装
+在我的.emacs文件中的以下设置为大多数缓冲区启动了org-mode。org-mode是 =.org=, =.org_archive= 和 =.txt= 文件的默认mode。
+#+begin_src emacs-lisp
+;;;
+;;; Org Mode
+;;;
+(add-to-list 'load-path (expand-file-name "~/git/org-mode/lisp"))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+(require 'org)
+;;
+;; Standard key bindings
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+#+end_src
+这是你在org-mode中开始使用标题和列表所需要的一切。
+本文的剩余部分描述了我在我的设置中使用的自定义功能，我是如何构建org-mode文件的,以及为适应我想org-mode去工作的方式而做出的其他改变。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
