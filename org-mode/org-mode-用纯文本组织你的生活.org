@@ -10,7 +10,7 @@
 :END:
 我把org-mode的一份副本保留在 =git= 仓库 =~/git/org-mode/= 中。
 这个克隆是用
-
+\\
 #+begin_src sh
 cd ~/git
 git clone git://orgmode.org/org-mode.git
