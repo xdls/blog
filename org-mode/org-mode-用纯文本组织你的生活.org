@@ -41,6 +41,7 @@ make uncompiled
 (global-set-key "\C-cb" 'org-iswitchb)
 #+end_src
 这是你在org-mode中开始使用标题和列表所需要的一切。
+
 本文的剩余部分描述了我在我的设置中使用的自定义功能，我是如何构建org-mode文件的,以及为适应我想org-mode去工作的方式而做出的其他改变。
 
 
