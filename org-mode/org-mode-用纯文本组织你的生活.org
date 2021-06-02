@@ -1,0 +1,27 @@
+* 入门
+:PROPERTIES:
+:ID:       e50cfa7b-a1be-4897-9c7c-8c669b42a4d2
+:END:
+入门 =org-mode= 真的很容易。你只需要在你的Emacs启动文件中加入几行，就可以使用来自git仓库的最新版本的org-mode。
+** 用git获取org-mode
+:PROPERTIES:
+:ID:       3def84b9-c018-4145-af4d-4fb1c05cf243
+:END:
+我把org-mode的一份副本保留在 =git= 仓库 =~/git/org-mode/= 中。
+这个克隆是用
+#+begin_src sh
+cd ~/git
+git clone git://orgmode.org/org-mode.git
+#+end_src
+
+要更新和获取org-mode开发者的新commits，你可以使用
+#+begin_src sh
+cd ~/git/org-mode
+git pull
+make uncompiled
+#+end_src
+
+我在我的设置中运行未编译的源文件，所以未编译的make目标就是你需要的。
+
+我通常使用org-mode仓库中的 =master= 分支。
+** 
