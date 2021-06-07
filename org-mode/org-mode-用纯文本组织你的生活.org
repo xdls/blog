@@ -92,3 +92,52 @@ org-mode非常适合于处理多个客户和客户项目。
 参见[[#发布][发布和导出]]了解更多细节。
 
 
+** 4.4 议程设置
+:PROPERTIES:
+:CUSTOM_ID: AgendaSetup
+:END:
+
+这是我当前的 =org-agenda-files= 设置。
+#+header: :tangle no
+#+begin_src emacs-lisp
+(setq org-agenda-files (quote ("~/git/org"
+                               "~/git/org/client1"
+                               "~/git/client2"））)
+#+end_src
+
+#+header: :tangle yes
+#+begin_src emacs-lisp :exports none
+;; 下面的设置与文档不同，这样你就可以
+;; 可以通过设置你的在变量org-user-agenda-files中的org-agenda-files来覆盖文档中的
+;; org-agenda-files
+;;
+(if (boundp 'org-user-agenda-files)
+    (setq org-agenda-files org-user-agenda-files)
+  (setq org-agenda-files (quote ("~/git/org"
+                               "~/git/org/client1"
+                               "~/git/client2"))))
+#+end_src
+
+=org-mode= 自动管理=org-agenda-files=变量，
+通过使用 =C-c [= 和 =C-c ]= 来分别添加和删除文件。
+然而,这就用一个明确的文件名列表取代了我的目录列表,
+这不是我想要的。 
+如果出现这种情况，
+那么在上述任何目录中添加一个新的org文件将不会对我的议程有所帮助,
+而且我可能会错过一些重要的东西。
+
+我已经禁用了=org-mode-hook= 中的 =C-c [= 和 =C-c ]= 键，
+以便防止扰乱我在 =org-agenda-files= 中的目录列表。
+我只是在我的 =.emacs= 中手动添加和删除目录。
+文件中手动添加和删除目录, 改变=org-agenda-files=中的目录列表很少发生,
+因为现有目录中的新文件会自动拾起。
+
+我还禁用了 =C-c ;= 的注释功能，因为我从不使用这些。
+在做 =C-c= 时，我总是不小心按到这个键序。
+
+在上面的例子中，我把 =~/git/client2= 放在一个独立的git仓库中，
+而不是 ~/git/org。 
+这让我可以灵活地将机密信息留在客户站点，
+而我的所有个人信息在我使用org-mode的任何地方都可以使用。 I
+我在多台机器上同步我的个人资源库，并跳过我旅行时携带的非客户笔记本电脑上的机密信息。
+这台笔记本上的 =org-agenda-files= 不包括 =~/git/client2= 目录。
