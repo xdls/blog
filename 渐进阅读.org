@@ -1,0 +1,16 @@
+#+CSL_STYLE: d:/card/ieee.csl
+#+TITLE: 渐进阅读
+* 导入
+  :PROPERTIES:
+  :ID:       d2f99248-2d17-4125-8451-b164a33071fc
+  :END:
+  cite:noauthor__nodate
+* 确定优先级
+  :PROPERTIES:
+  :ID:       8908ef07-e419-4182-a930-0983425b5e10
+  :END:
+* 确定引用标题
+  :PROPERTIES:
+  :ID:       04e38fb8-e822-450b-b9a1-8b57171bc09a
+  :END:
+bibliography:d:/GitHub/1/blog/渐进阅读.bib
