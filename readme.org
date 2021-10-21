@@ -1,2 +1,7 @@
 #+TITLE: 个人博客
-* org-mode
+* index
+  :PROPERTIES:
+  :ID:       69727ef5-3bdb-4acf-b548-6d1f821d7295
+  :END:
+  + [[file:博客迁移.md][博客迁移]]
+  + [[file:渐进阅读.md][渐进阅读]]
